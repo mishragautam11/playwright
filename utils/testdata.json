@@ -1,9 +1,8 @@
 {
-    
-"url":"https://www.google.com/",
-"textinput":"facebook",
-"username":" ",
-"password":" "
+"LHH_UAT":"https://uat.candidate.lhh.com/",
+"LHH_QA":"https://qa.candidate.lhh.com/",
+"username":"cm_uat_16",
+"password":"P@ssword123"
 
 
 

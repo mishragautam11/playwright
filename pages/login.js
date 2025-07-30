@@ -1,24 +1,29 @@
 import { test, expect } from '@playwright/test';
+import { TIMEOUT } from 'dns';
 
 
-class GooglePage{
+class LoginPage {
 
-constructor(page){
-    this.page=page;
+    constructor(page) {
+        this.page = page;
 
-    // Create locators
-    this.search = page.locator("//textarea[@id='APjFqb']");
+        // Create locators
+        this.userName = page.locator("//input[@id='signInName']");
+        this.password = page.locator("//input[@id='password']");
+        this.loginBtn = page.locator("//button[@id='continue']");
+
+    }
+
+    async testGoogle(usrname, pass) {
+        await this.page.goto(process.env.UAT_URL);
+        await this.userName.fill(usrname);
+        await this.password.fill(pass);
+        await this.loginBtn.click();
+        
+        
+    }
+
+
 }
 
-async testGoogle(searchtext){
-    await this.page.goto("https://www.google.com/");
-    await this.search.fill(searchtext);
-    await this.page.waitForTimeout(3000);
-   
-    
-}
-
-
-}
-
-module.exports=GooglePage;
+module.exports = LoginPage;

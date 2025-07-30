@@ -3,9 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "default":"npx playwight test",
-    "gautam":"npx playwright test ./tests/example.spec.js --headed" 
-
+    "default": "npx playwight test",
+    "lhh": "npx playwright test ./tests/example.spec.js --headed"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +13,8 @@
   "devDependencies": {
     "@playwright/test": "^1.52.0",
     "@types/node": "^22.15.21"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
   }
 }
